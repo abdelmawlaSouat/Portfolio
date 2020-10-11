@@ -1,0 +1,30 @@
+/*
+ * index.js
+ *
+ * Author: Abdelmawla Souat (abdelmawla.souat@gmail.com)
+ * Created on 2020/10/11 20:19:04
+ *
+ * Copyright (c) 2020 Shuriken
+ */
+
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomePage from '../views/HomePage.vue'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'HomePage',
+    component: HomePage
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  // base: process.env.BASE_URL,
+  routes
+})
+
+export default router
