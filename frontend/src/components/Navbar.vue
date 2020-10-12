@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark >
+  <v-app-bar dark>
     <v-row align="center" justify="space-around" justify-sm="space-around">
       <v-toolbar-title style="overflow: visible">
         <router-link
@@ -34,7 +34,7 @@
         </a>
       </div>
     </v-row>
-  </v-toolbar>
+  </v-app-bar>
 </template>
 
 <script>
