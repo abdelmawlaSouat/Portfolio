@@ -1,40 +1,38 @@
 <template>
-  <v-app-bar dark>
+  <v-toolbar dark>
     <v-row align="center" justify="space-around" justify-sm="space-around">
       <v-toolbar-title style="overflow: visible">
-        <router-link
-          to="#"
-          class="logo pa-2"
-          style="color: white"
-        >
-          AS
-        </router-link>
+        <span class="logo pa-2">AS</span>
       </v-toolbar-title>
+
       <div>
-        <router-link
+        <a
           v-for="(item, idx) in items"
           :key="idx"
-          :to="item.anchor"
+          href="#"
+          v-scroll-to="item.anchor"
           class="mx-2"
-          style="color: white"
         >
           {{ item.name }}
-        </router-link>
-      </div>
-      <div class="">
-        <a href="https://www.linkedin.com/in/abdelmawla-souat-3a4aa1165/">
-          <v-icon class="ml-5 mr-1">
-          mdi-linkedin
-        </v-icon>
         </a>
-        <a href="https://github.com/abdelmawlaSouat">
-          <v-icon class="mx-1">
-          mdi-github
-        </v-icon>
+      </div>
+
+      <div>
+        <a
+          href="https://www.linkedin.com/in/abdelmawla-souat-3a4aa1165/"
+          target="_blank"
+        >
+          <v-icon class="ml-5 mr-1">mdi-linkedin</v-icon>
+        </a>
+        <a
+          href="https://github.com/abdelmawlaSouat"
+          target="_blank"
+        >
+          <v-icon class="mx-1">mdi-github</v-icon>
         </a>
       </div>
     </v-row>
-  </v-app-bar>
+  </v-toolbar>
 </template>
 
 <script>
@@ -43,7 +41,6 @@ export default {
   data () {
     return {
       items: [
-        { name: 'HOME', anchor: '#' },
         { name: 'ABOUT ME', anchor: '#about-me' },
         { name: 'PROJECTS', anchor: '#projects' },
         { name: 'CONTACT', anchor: '#contact' }
@@ -55,11 +52,13 @@ export default {
 
 <style>
 
-a {
-  text-decoration: none;
-}
-
 .logo {
   border: 1px solid white;
+  /* transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out; */
 }
+/* .logo:hover {
+  transform: rotate(-90deg);
+  transition: transform 0.4s ease-in-out;
+} */
 </style>

@@ -1,7 +1,22 @@
 <template>
-  <div class="about-me pt-10">
+  <div id="about-me" class="pt-10">
     <h2>ABOUT ME</h2>
     <div class="title-line my-5" ></div>
+
+    <!-- Profile -->
+    <v-card class="profile px-4 pb-10 mt-8"  width="900" rounded>
+      <v-card-title>PROFILE</v-card-title>
+      <v-card-text class="d-flex py-2">
+        After a cursus at 19 (42 network) and a rewarding internship in
+        software development at Niboo, I am aiming at a company that
+        could not only trust me but also allow me to grow as a
+        developer. With an overflowing curiosity and a pronounced taste
+        for learning, I wish to work mainly with React.js or Vue.js for the
+        front-end.
+      </v-card-text>
+    </v-card>
+
+    <!-- Skills -->
     <v-card class="skills px-4 pb-10 mt-8"  width="900" rounded>
       <v-card-title>SKILLS</v-card-title>
       <v-card-text class="d-flex py-2">
@@ -17,6 +32,7 @@
     </v-card>
 
     <div class="d-flex justify-center mt-10 pt-4">
+      <!-- Education -->
       <v-card class="education px-4" width="430">
         <v-card-title>EDUCATION</v-card-title>
         <v-card-text>
@@ -25,11 +41,13 @@
             :key="idx"
             class="school-item py-2"
           >
-            <v-img
-              :src="require('@/assets/' + school.src)"
-              width="60"
-              class="mr-4"
-            ></v-img>
+            <a :href="school.site" target="_blank">
+              <v-img
+                :src="require('@/assets/' + school.src)"
+                width="60"
+                class="mr-4"
+              ></v-img>
+            </a>
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title>{{ `${school.date} | ${school.name}` }}</v-list-item-title>
@@ -39,15 +57,19 @@
           </div>
         </v-card-text>
       </v-card>
+
+      <!-- Work Experiences -->
       <v-card class="work-xp px-4 ml-10" width="430">
         <v-card-title>WORK EXPERIENCE</v-card-title>
         <v-card-text>
           <div class="d-flex">
-            <v-img
-              :src="require('@/assets/niboo.png')"
-              width="100"
-              class="mr-4"
-            ></v-img>
+            <a href="https://www.niboo.com/page/homepage" target="_blank">
+              <v-img
+                :src="require('@/assets/niboo.png')"
+                width="100"
+                class="mr-4"
+              ></v-img>
+            </a>
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title>Intern Software Developer</v-list-item-title>
@@ -88,18 +110,21 @@ export default {
       schools: [
         {
           src: 'epfc.jpg',
+          site: 'https://www.epfc.eu/',
           name: 'EPFC',
           date: '2020',
           course: 'English Course (A2)'
         },
         {
           src: '19.png',
+          site: 'https://www.s19.be/',
           name: '19 Coding School',
           date: '2018 - 2020',
           course: 'Computer Programming'
         },
         {
           src: 'esi.jpg',
+          site: 'https://www.he2b.be/campus-esi',
           name: 'ESI',
           date: '2017 - 2018',
           course: 'Business Computing'
@@ -112,13 +137,11 @@ export default {
 
 <style>
 
-.about-me {
-  min-height: 100vh;
-  /* max-width: 100vh; */
+#about-me {
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* text-align: center; */
 }
 
 .school-item {
@@ -126,11 +149,10 @@ export default {
   align-items: center;
 }
 
-.title-line {
+#about-me .title-line {
   height: 1px;
   border: 1px solid black;
   width: 10vh;
-
 }
 
 </style>

@@ -1,36 +1,53 @@
 <template>
-  <div class="home">
-    <div class="home-content">
-      <h1>
-        Hello, my name is Abdelmawla Souat. <br/>
-        I'm a <span class="green-text">Front-End Developer</span>.
-      </h1>
-      <p class="my-5">
-        After a cursus at 19 (42 network) and a rewarding internship in
-        software development at Niboo, I am aiming at a company that
-        could not only trust me but also allow me to grow as a
-        developer. With an overflowing curiosity and a pronounced taste
-        for learning, I wish to work mainly with React.js or Vue.js for the
-        front-end.
-      </p>
-      <div >
-        <v-btn outlined x-large color="white" class="mx-4">Download My CV</v-btn>
-        <v-btn outlined x-large color="white" class="mx-4">Contact Me</v-btn>
+  <div id="home">
+    <Navbar />
+
+    <div class="home-container">
+      <div class="home-content">
+        <h1>
+          Hello ! &#128075; <br>
+          My name is Abdelmawla Souat. <br/>
+          I'm a <span class="green-text">Front-End Developer</span>.
+        </h1>
+
+        <div class="my-5">
+          <v-btn v-bind="attrsBtns">
+            Download My CV
+          </v-btn>
+
+          <a href="#" v-scroll-to="'#contact'">
+            <v-btn v-bind="attrsBtns">
+              Contact Me
+            </v-btn>
+          </a>
+        </div>
+      </div>
+
+      <div class="circle-div" >
+        <a href="#" v-scroll-to="'#about-me'">
+          <v-icon dark x-large>mdi-chevron-down</v-icon>
+        </a>
       </div>
     </div>
-    <div class="circle" >
-      <v-icon dark x-large>mdi-chevron-down</v-icon>
-    </div>
-  </div>
 
+  </div>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue'
 export default {
   name: 'Home',
+  components: {
+    Navbar
+  },
   data () {
     return {
-    //
+      attrsBtns: {
+        class: 'mx-4',
+        color: 'white',
+        outlined: true,
+        'x-large': true
+      }
     }
   }
 }
@@ -38,7 +55,7 @@ export default {
 
 <style>
 
-.home {
+.home-container {
   min-height: 94vh;
   background-color: #252934;
   color: white;
@@ -57,13 +74,4 @@ export default {
   min-height: 75vh;
 }
 
-.circle {
-  border: 1px solid white;
-  border-radius: 50%;
-  margin-bottom: 2.5rem;
-}
-
-.green-text {
-  color: #1ABC9C;
-}
 </style>
