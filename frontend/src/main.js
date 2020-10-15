@@ -13,7 +13,6 @@ import vuetify from './plugins/vuetify'
 import VueScrollTo from 'vue-scrollto'
 
 Vue.config.productionTip = false
-
 Vue.use(VueScrollTo)
 new Vue({
   vuetify,

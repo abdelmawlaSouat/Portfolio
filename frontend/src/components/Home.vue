@@ -11,7 +11,7 @@
         </h1>
 
         <div class="my-5">
-          <v-btn v-bind="attrsBtns">
+          <v-btn v-bind="attrsBtns" @click="downloadCV()">
             Download My CV
           </v-btn>
 
@@ -48,6 +48,11 @@ export default {
         outlined: true,
         'x-large': true
       }
+    }
+  },
+  methods: {
+    downloadCV () {
+      window.location.href = 'http://localhost:3000/api/download/cv'
     }
   }
 }
