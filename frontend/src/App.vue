@@ -3,6 +3,7 @@
     <v-main>
       <Home />
       <AboutMe />
+      <Projects />
       <Contact />
       <Footer />
     </v-main>
@@ -12,6 +13,7 @@
 <script>
 import Home from '@/components/Home.vue'
 import AboutMe from '@/components/AboutMe.vue'
+import Projects from '@/components/Projects.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
 
@@ -20,6 +22,7 @@ export default {
   components: {
     Home,
     AboutMe,
+    Projects,
     Contact,
     Footer
   }

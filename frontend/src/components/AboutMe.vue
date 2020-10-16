@@ -27,37 +27,9 @@
           <v-img
             width="45"
             class="skill img-to-scale mb-4"
-            :src="require('@/assets/' + skill.src)"
+            :src="require('@/assets/skills/' + skill.src)"
           ></v-img>
           <span>{{ skill.title }}</span>
-        </div>
-      </v-card-text>
-    </v-card>
-
-    <!-- Education -->
-    <v-card class="education mt-8 pt-4" width="900">
-      <v-card-title>EDUCATION</v-card-title>
-      <v-card-text>
-        <div
-          v-for="(school, idx) in schools"
-          :key="idx"
-          class="school-item px-5 py-2"
-        >
-          <a :href="school.site" target="_blank">
-            <v-img
-              :src="require('@/assets/' + school.src)"
-              width="60"
-              class="mr-4 img-to-scale"
-            ></v-img>
-          </a>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>{{
-                `${school.date} | ${school.name}`
-              }}</v-list-item-title>
-              <v-list-item-subtitle>{{ school.course }}</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
         </div>
       </v-card-text>
     </v-card>
@@ -90,6 +62,34 @@
           decentralized version management. The goal was to develop customized
           solutions for the customer.
         </v-list-item-content>
+      </v-card-text>
+    </v-card>
+
+    <!-- Education -->
+    <v-card class="education mt-8 pt-4" width="900">
+      <v-card-title>EDUCATION</v-card-title>
+      <v-card-text>
+        <div
+          v-for="(school, idx) in schools"
+          :key="idx"
+          class="school-item px-5 py-2"
+        >
+          <a :href="school.site" target="_blank">
+            <v-img
+              :src="require('@/assets/education/' + school.src)"
+              width="60"
+              class="mr-4 img-to-scale"
+            ></v-img>
+          </a>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>{{
+                `${school.date} | ${school.name}`
+              }}</v-list-item-title>
+              <v-list-item-subtitle>{{ school.course }}</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </div>
       </v-card-text>
     </v-card>
   </div>

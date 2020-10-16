@@ -14,12 +14,6 @@
           <v-btn v-bind="attrsBtns" @click="downloadCV()">
             Download My CV
           </v-btn>
-
-          <a href="#" v-scroll-to="'#contact'">
-            <v-btn v-bind="attrsBtns">
-              Contact Me
-            </v-btn>
-          </a>
         </div>
       </div>
 
@@ -46,7 +40,7 @@ export default {
         class: 'mx-4',
         color: 'white',
         outlined: true,
-        'x-large': true
+        large: true
       }
     }
   },
