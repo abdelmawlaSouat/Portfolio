@@ -2,7 +2,7 @@
   <v-toolbar color="#252934" dark>
     <v-row align="center">
       <v-spacer></v-spacer>
-      <div>
+      <div v-show="$vuetify.breakpoint.smAndUp">
         <a
           v-for="(item, idx) in items"
           :key="idx"
@@ -40,16 +40,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-.logo {
-  border: 1px solid white;
-  /* transform: rotate(0deg);
-  transition: transform 0.4s ease-in-out; */
-}
-/* .logo:hover {
-  transform: rotate(-90deg);
-  transition: transform 0.4s ease-in-out;
-} */
-</style>

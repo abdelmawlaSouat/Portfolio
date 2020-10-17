@@ -18,7 +18,7 @@
     <!-- Skills -->
     <v-card class="skills px-4 pb-10 mt-8" width="900" rounded>
       <v-card-title>SKILLS</v-card-title>
-      <v-card-text class="d-flex flex-wrap py-2">
+      <v-card-text class="d-flex justify-center justify-sm-start flex-wrap py-2">
         <div
           v-for="(skill, idx) in skills"
           :key="idx"
@@ -38,15 +38,15 @@
     <v-card class="work-xp mt-8 pt-4" width="900">
       <v-card-title>WORK EXPERIENCE</v-card-title>
       <v-card-text>
-        <div class="d-flex px-5">
+        <div class="d-flex">
           <a href="https://www.niboo.com/page/homepage" target="_blank">
             <v-img
               :src="require('@/assets/niboo.png')"
-              width="100"
+              width="80"
               class="mx-4 img-to-scale"
             ></v-img>
           </a>
-          <v-list-item>
+          <v-list-item class="px-0">
             <v-list-item-content>
               <v-list-item-title>Intern Software Developer</v-list-item-title>
               <v-list-item-subtitle
@@ -77,7 +77,7 @@
           <a :href="school.site" target="_blank">
             <v-img
               :src="require('@/assets/education/' + school.src)"
-              width="60"
+              width="50"
               class="mr-4 img-to-scale"
             ></v-img>
           </a>

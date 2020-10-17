@@ -17,10 +17,12 @@
             v-for="(screen, idx) in project.screens"
             :key="idx"
           >
-            <v-img
+          <!-- Waiting IMAGES.... -->
+            <!-- <v-img
+              max-width="100%"
               class="white--text align-end"
               :src="require(`@/assets/projects/${project.folder}/${screen}`)"
-            ></v-img>
+            ></v-img> -->
           </v-carousel-item>
         </v-carousel>
 
@@ -80,10 +82,7 @@ export default {
       projects: {
         mindset: {
           folder: 'mindset',
-          screens: [
-            '1.png', '2.png',
-            '3.png', '4.png'
-          ],
+          screens: ['X.png', 'Z.png', 'Z.png'],
           technos: [
             'javacript', 'vue.js', 'vue router', 'vueX', 'axios',
             'vuetify', 'css3', 'html5', 'node.js', 'mongoDB', 'express',

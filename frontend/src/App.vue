@@ -48,7 +48,6 @@ export default {
 .circle-div {
   border: 1px solid white;
   border-radius: 50%;
-  margin-bottom: 2.5rem;
 }
 
 </style>

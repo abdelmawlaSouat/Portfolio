@@ -26,7 +26,7 @@
       </v-card>
     </div>
 
-    <div class="circle-div">
+    <div class="circle-div" style="margin-bottom: 5vh">
       <a href="#" v-scroll-to="'#home'">
         <v-icon dark x-large>mdi-chevron-up</v-icon>
       </a>
