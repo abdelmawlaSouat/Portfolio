@@ -43,7 +43,7 @@
             <v-img
               :src="require('@/assets/niboo.png')"
               width="80"
-              class="mx-4 img-to-scale"
+              class="mx-6 img-to-scale"
             ></v-img>
           </a>
           <v-list-item class="px-0">
@@ -163,6 +163,6 @@ export default {
 }
 
 .img-to-scale:hover {
-  transform: scale(1.50);
+  transform: scale(1.25);
 }
 </style>
