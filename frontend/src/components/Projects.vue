@@ -75,6 +75,19 @@ export default {
       projects: [
         {
           overviewImg: {
+            src: 'insure-landing-page.jpg',
+            alt: 'Insure landing page Overview'
+          },
+          title: 'Insure landing page',
+          subtitle: 'Junior Challenge From frontendmentor.io',
+          technos: [
+            'javacript', 'vue.js', 'vuetify', 'css3', 'html5'
+          ],
+          githubLink: 'https://github.com/abdelmawlaSouat/Insure-landing-page',
+          siteLink: 'https://insure-landing-page-flax.vercel.app/'
+        },
+        {
+          overviewImg: {
             src: 'testimonials-grid.jpg',
             alt: 'Testimonials grid Overview'
           },
