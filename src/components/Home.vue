@@ -44,9 +44,10 @@ export default {
       }
     }
   },
+
   methods: {
     downloadCV () {
-      window.location.href = 'http://localhost:3000/api/download/cv'
+      window.location.href = 'https://github.com//abdelmawlaSouat/Portfolio/raw/master/public/CV%20-%20Souat%20Abdelmawla.pdf'
     }
   }
 }
