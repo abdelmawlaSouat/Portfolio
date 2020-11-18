@@ -22,22 +22,27 @@
                   ></v-img>
                 </a>
 
-                <v-card-title>{{ project.title }}</v-card-title>
+                <v-card-title class="d-flex justify-space-between">
+                  {{ project.title }}
+                  <v-icon @click="project.showSkills = !project.showSkills">mdi-chevron-down</v-icon>
+                </v-card-title>
 
               <v-card-subtitle>
                 {{ project.subtitle }}
               </v-card-subtitle>
 
-              <v-card-text class="mt-1">
-                <v-chip
-                  v-for="(techno, idx) in project.technos" :key="idx"
-                  class="mr-1 mb-1"
-                  color="primary"
-                  dark outlined
-                >
-                  {{ techno }}
-                </v-chip>
-              </v-card-text>
+              <transition name="fade">
+                <v-card-text class="mt-1" v-show="project.showSkills">
+                  <v-chip
+                    v-for="(techno, idx) in project.technos" :key="idx"
+                    class="mr-1 mb-1"
+                    color="primary"
+                    dark outlined
+                  >
+                    {{ techno }}
+                  </v-chip>
+                </v-card-text>
+              </transition>
 
               <v-card-actions class="d-flex justify-end">
                 <a :href="project.githubLink" target="_blank">
@@ -75,11 +80,26 @@ export default {
       projects: [
         {
           overviewImg: {
+            src: 'pricing-component.jpg',
+            alt: 'Pricing Component Overview'
+          },
+          title: 'Pricing Component',
+          subtitle: 'Junior Challenge From frontendmentor.io',
+          showSkills: false,
+          technos: [
+            'javacript', 'react.js', 'material ui', 'css3', 'html5'
+          ],
+          githubLink: 'https://github.com/abdelmawlaSouat/Pricing-Component',
+          siteLink: 'https://pricing-component-rho.vercel.app/'
+        },
+        {
+          overviewImg: {
             src: 'insure-landing-page.jpg',
             alt: 'Insure landing page Overview'
           },
           title: 'Insure landing page',
           subtitle: 'Junior Challenge From frontendmentor.io',
+          showSkills: false,
           technos: [
             'javacript', 'vue.js', 'vuetify', 'css3', 'html5'
           ],
@@ -93,6 +113,7 @@ export default {
           },
           title: 'Testimonials grid',
           subtitle: 'Junior Challenge From frontendmentor.io',
+          showSkills: false,
           technos: [
             'javacript', 'vue.js', 'vuetify', 'css3', 'html5'
           ],
@@ -106,6 +127,7 @@ export default {
           },
           title: 'Ping page coming soon',
           subtitle: 'Newbie Challenge From frontendmentor.io',
+          showSkills: false,
           technos: [
             'javacript', 'vue.js', 'vuetify', 'css3', 'html5'
           ],
@@ -119,6 +141,7 @@ export default {
           },
           title: 'Base Apparel coming soon page',
           subtitle: 'Newbie Challenge From frontendmentor.io',
+          showSkills: false,
           technos: [
             'javacript', 'vue.js', 'vuetify', 'css3', 'html5'
           ],
@@ -132,6 +155,7 @@ export default {
           },
           title: 'FAQ accordion card',
           subtitle: 'Newbie Challenge From frontendmentor.io',
+          showSkills: false,
           technos: [
             'javacript', 'vue.js', 'vuetify', 'css3', 'html5'
           ],
@@ -169,6 +193,13 @@ export default {
 
 .img-to-scale:hover {
   transform: scale(1.05);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 </style>
