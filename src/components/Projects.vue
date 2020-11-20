@@ -80,6 +80,20 @@ export default {
       projects: [
         {
           overviewImg: {
+            src: 'huffle-landing-page.jpg',
+            alt: 'Huffle Landing Page Overview'
+          },
+          title: 'Huffle Landing Page',
+          subtitle: 'Junior Challenge From frontendmentor.io',
+          showSkills: false,
+          technos: [
+            'javacript', 'react.js', 'material ui', 'css3', 'html5'
+          ],
+          githubLink: 'https://github.com/abdelmawlaSouat/Huddle-landing-page',
+          siteLink: 'https://huddle-landing-page-wheat.vercel.app/'
+        },
+        {
+          overviewImg: {
             src: 'pricing-component.jpg',
             alt: 'Pricing Component Overview'
           },
