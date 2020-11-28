@@ -102,13 +102,13 @@ export default {
     return {
       skills: [
         { src: 'javascript.png', title: 'Javascript' },
-        { src: 'typescript.png', title: 'Typescript' },
+        // { src: 'typescript.png', title: 'Typescript' },
         { src: 'vue.png', title: 'Vue.js' },
         { src: 'react.png', title: 'React.js' },
-        { src: 'nuxt.png', title: 'Nuxt.js' },
+        // { src: 'nuxt.png', title: 'Nuxt.js' },
         { src: 'html.png', title: 'HTML 5' },
         { src: 'css.png', title: 'CSS 3' },
-        { src: 'sass.png', title: 'Sass' },
+        // { src: 'sass.png', title: 'Sass' },
         { src: 'vuetify.png', title: 'Vuetify' },
         { src: 'bootstrap.png', title: 'Bootstrap' },
         { src: 'mui.png', title: 'Material UI' },
