@@ -80,6 +80,20 @@ export default {
       projects: [
         {
           overviewImg: {
+            src: 'to-do-app.jpg',
+            alt: 'To Do App'
+          },
+          title: 'To Do App',
+          subtitle: 'Intermediate Challenge From frontendmentor.io',
+          showSkills: false,
+          technos: [
+            'javacript', 'react.js', 'material ui', 'css3', 'html5'
+          ],
+          githubLink: 'https://github.com/abdelmawlaSouat/To-Do-App',
+          siteLink: 'https://to-do-app-xi.vercel.app/'
+        },
+        {
+          overviewImg: {
             src: 'huffle-landing-page.jpg',
             alt: 'Huffle Landing Page Overview'
           },
