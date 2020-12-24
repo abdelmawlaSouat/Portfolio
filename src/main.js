@@ -15,6 +15,6 @@ import VueScrollTo from 'vue-scrollto'
 Vue.config.productionTip = false
 Vue.use(VueScrollTo)
 new Vue({
-  vuetify,
-  render: h => h(App)
+	vuetify,
+	render: (h) => h(App),
 }).$mount('#app')

@@ -1,5 +1,11 @@
-# https://abdelmawla-souat.vercel.app/
+# Portfolio
 
-![Homepage](/public/homepage.png)
+## [Demo](https://abdelmawla-souat.vercel.app/)
 
-This is the source code to my personal website.
+![Preview](/public/homepage.png)
+
+## Technology Used
+
+- [Vue.js](https://vuejs.org/)
+- [Vuetify](https://vuetifyjs.com/en/)
+- Hosted on [Vercel](https://vercel.com/)

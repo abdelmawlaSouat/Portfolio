@@ -1,13 +1,13 @@
 <template>
-  <v-app>
-    <v-main>
-      <Home />
-      <AboutMe />
-      <Projects />
-      <Contact />
-      <Footer />
-    </v-main>
-  </v-app>
+	<v-app>
+		<v-main>
+			<Home />
+			<AboutMe />
+			<Projects />
+			<Contact />
+			<Footer />
+		</v-main>
+	</v-app>
 </template>
 
 <script>
@@ -18,36 +18,34 @@ import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name: 'HomePage',
-  components: {
-    Home,
-    AboutMe,
-    Projects,
-    Contact,
-    Footer
-  }
+	name: 'HomePage',
+	components: {
+		Home,
+		AboutMe,
+		Projects,
+		Contact,
+		Footer,
+	},
 }
 </script>
 
 <style lang="css">
-
 #app a {
-  color: white;
-  transition: 0.2s;
-  text-decoration: none;
+	color: white;
+	transition: 0.2s;
+	text-decoration: none;
 }
 
 #app a:hover {
-  color: #1ABC9C;
+	color: #1abc9c;
 }
 
 #app .green-text {
-  color: #1ABC9C;
+	color: #1abc9c;
 }
 
 .circle-div {
-  border: 1px solid white;
-  border-radius: 50%;
+	border: 1px solid white;
+	border-radius: 50%;
 }
-
 </style>
